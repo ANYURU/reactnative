@@ -1,6 +1,6 @@
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import React from 'react'
-import { GLOBAL_STYLES } from './styles/style'
+import { GLOBAL_STYLES } from '../styles/style'
 
 const LoginScreen = (props) => {
   return (

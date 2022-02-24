@@ -9,17 +9,37 @@
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import DashboardScreen from './DashboardScreen'
-import LoginScreen from './LoginScreen'
+import DashboardScreen from './Screens/DashboardScreen'
+import LoginScreen from './Screens/LoginScreen'
+import PrayerScreen from './Screens/PrayerScreen'
+import BibleScreen from './Screens/BibleScreen'
+import TestimoniesScreen from './Screens/TestimoniesScreen'
+import ServiceScreen from './Screens/ServiceScreen'
+import CellScreen from './Screens/CellScreen'
+import TitheScreen from './Screens/TitheScreen'
+import DonateScreen from './Screens/DonateScreen'
 
 const App = () => {
   const Stack = createNativeStackNavigator()
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName='Dashboard'>
         <Stack.Screen name="Login" component={LoginScreen}/>
-        <Stack.Screen name="Dashboard" component={DashboardScreen} />
+        <Stack.Screen name="Dashboard" 
+          component={DashboardScreen}
+          options={{
+            headerShown:false,
+          }}/>
+        <Stack.Screen name="Prayer" component={PrayerScreen} />
+        <Stack.Screen name="Bible" component={BibleScreen} />
+        <Stack.Screen name="Testimonies" component={TestimoniesScreen} />
+        <Stack.Screen name="Service" component={ServiceScreen} />
+        <Stack.Screen name="Cell" component={CellScreen} />
+        <Stack.Screen name="Tithe" component={TitheScreen} />
+        <Stack.Screen name="Donate" component={DonateScreen} />
+
+
       </Stack.Navigator>
     </NavigationContainer>
   )
