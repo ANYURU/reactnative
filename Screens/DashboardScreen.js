@@ -17,7 +17,7 @@ const DashboardScreen = ({navigation}) => {
       }}><Text style={GLOBAL_STYLES.dashboardItemText}>Testimonies</Text></TouchableOpacity>
       <TouchableOpacity style={[GLOBAL_STYLES.dashboardItem, GLOBAL_STYLES.dashboardItemGreen]} onPress={()=>{
           navigation.navigate('Service')
-      }}><Text style={GLOBAL_STYLES.dashboardItemText}>Sunday Service</Text></TouchableOpacity>
+      }}><Text style={GLOBAL_STYLES.dashboardItemText}>Main Service</Text></TouchableOpacity>
       <TouchableOpacity style={[GLOBAL_STYLES.dashboardItem, GLOBAL_STYLES.dashboardItemPink]} onPress={()=>{
           navigation.navigate('Cell')
       }}><Text style={GLOBAL_STYLES.dashboardItemText}>Online Cell</Text></TouchableOpacity>

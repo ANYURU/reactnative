@@ -1,11 +1,18 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import YoutubePlayer from 'react-native-youtube-iframe';
 
 const ServiceScreen = () => {
   return (
     <View>
-      <Text>Service</Text>
+      <YoutubePlayer
+        height={300}
+        play={true}
+        videoId={'84WIaK3bl_s'}
+      />
     </View>
+
+
   )
 }
 
