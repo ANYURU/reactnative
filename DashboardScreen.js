@@ -1,13 +1,14 @@
 import { View, Text, TouchableOpacity, Button } from 'react-native'
 import React from 'react'
+import { GLOBAL_STYLES } from './styles/style'
 
 const DashboardScreen = ({navigation}) => {
   return (
-    <View>
+    <View style={GLOBAL_STYLES.container}>
       <Text>DashboardScreen</Text>
-      <TouchableOpacity onPress={()=>{
+      <TouchableOpacity style={GLOBAL_STYLES.button} onPress={()=>{
           navigation.navigate('Login')
-      }}><Text>Logout</Text></TouchableOpacity>
+      }}><Text style={GLOBAL_STYLES.buttonText}>Logout</Text></TouchableOpacity>
       {/* <Button 
         title="Go to Dashboard Again"
         onPress={() => navigation.navigate('Dashboard')}

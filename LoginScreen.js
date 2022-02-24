@@ -1,17 +1,17 @@
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import React from 'react'
-import { NavigationContainer } from '@react-navigation/native'
+import { GLOBAL_STYLES } from './styles/style'
 
 const LoginScreen = (props) => {
   return (
-    <View style={STYLES.container}>
+    <View style={GLOBAL_STYLES.container}>
       <Text>LoginScreen</Text>
         <TouchableOpacity 
-            style={STYLES.button}
+            style={GLOBAL_STYLES.button}
             onPress={()=>{
                 props.navigation.navigate('Dashboard')
             }}>
-            <Text style={{'color':'white'}}>Login</Text>
+            <Text style={GLOBAL_STYLES.buttonText}>Login</Text>
        </TouchableOpacity>
     </View>
   )
@@ -19,16 +19,3 @@ const LoginScreen = (props) => {
 
 export default LoginScreen
 
-const STYLES = StyleSheet.create({
-    container:{
-        'flex':1,
-        'justifyContent':'center',
-        'alignItems':'center'
-    },
-
-    button: {
-        'backgroundColor':'red',
-        'width':'100%',
-        'padding':10,
-    }
-})
