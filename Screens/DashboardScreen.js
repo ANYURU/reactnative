@@ -6,12 +6,25 @@ const DashboardScreen = ({navigation}) => {
   return (
     <View style={GLOBAL_STYLES.dashboard}>
       {/* <Text>Dashboard</Text> */}
-      <TouchableOpacity style={[GLOBAL_STYLES.dashboardItem, GLOBAL_STYLES.dashboardItemPurple]} onPress={()=>{
-          navigation.navigate('Prayer')
-      }}><Text style={[GLOBAL_STYLES.dashboardItemText, GLOBAL_STYLES.dashboardFont]}>Prayer Request</Text></TouchableOpacity>
+      <TouchableOpacity 
+        style={[GLOBAL_STYLES.dashboardItem, GLOBAL_STYLES.dashboardItemPurple]} 
+        onPress={()=>{
+            navigation.navigate('Prayer')
+      }}
+      >
+        <Text 
+            style={
+                [
+                    GLOBAL_STYLES.dashboardItemText, 
+                    GLOBAL_STYLES.dashboardFont
+                ]
+            }
+            >Prayer Request
+        </Text>
+    </TouchableOpacity>
       <TouchableOpacity style={[GLOBAL_STYLES.dashboardItem, GLOBAL_STYLES.dashboardItemOrange]} onPress={()=>{
           navigation.navigate('Bible')
-      }}><Text style={GLOBAL_STYLES.dashboardItemText}>Bible Study</Text></TouchableOpacity>
+      }}><Text style={[GLOBAL_STYLES.dashboardItemText, GLOBAL_STYLES.headings]}>Bible Study</Text></TouchableOpacity>
       <TouchableOpacity style={[GLOBAL_STYLES.dashboardItem, GLOBAL_STYLES.dashboardItemWhite]} onPress={()=>{
           navigation.navigate('Testimonies')
       }}><Text style={GLOBAL_STYLES.dashboardItemText}>Testimonies</Text></TouchableOpacity>

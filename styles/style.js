@@ -62,7 +62,11 @@ const GLOBAL_STYLES = StyleSheet.create({
     dashboardFont:{
         fontFamily:FONTS.PRIMARY
 
-    }
+    },
+
+    headings:{
+        fontFamily:FONTS.HEADINGS
+    },
 
 
 })

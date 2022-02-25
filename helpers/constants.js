@@ -11,7 +11,7 @@ const COLORS = {
 
 const FONTS = {
     PRIMARY:'AdventPro-Medium',
-
+    HEADINGS:'FredokaOne-Regular',
 }
 
 export {COLORS, FONTS}

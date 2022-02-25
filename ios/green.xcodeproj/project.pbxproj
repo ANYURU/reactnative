@@ -21,6 +21,7 @@
 		5D0A98BC99024415A8063578 /* AdventPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8BD3770970D4687B0F8157E /* AdventPro-Regular.ttf */; };
 		1D29FE125BEC403DA16111DD /* AdventPro-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B893A2AE8B76494AB8D1CE82 /* AdventPro-SemiBold.ttf */; };
 		FD91F331B82749C69081AF68 /* AdventPro-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5AB7D65CA2D74AAEA4BFE56B /* AdventPro-Thin.ttf */; };
+		BA2E4B8B76144AF690C94304 /* FredokaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ADF178D2ADD4FF093497E11 /* FredokaOne-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		D8BD3770970D4687B0F8157E /* AdventPro-Regular.ttf */ = {isa = PBXFileReference; name = "AdventPro-Regular.ttf"; path = "../assets/fonts/AdventPro-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		B893A2AE8B76494AB8D1CE82 /* AdventPro-SemiBold.ttf */ = {isa = PBXFileReference; name = "AdventPro-SemiBold.ttf"; path = "../assets/fonts/AdventPro-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		5AB7D65CA2D74AAEA4BFE56B /* AdventPro-Thin.ttf */ = {isa = PBXFileReference; name = "AdventPro-Thin.ttf"; path = "../assets/fonts/AdventPro-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7ADF178D2ADD4FF093497E11 /* FredokaOne-Regular.ttf */ = {isa = PBXFileReference; name = "FredokaOne-Regular.ttf"; path = "../assets/fonts/FredokaOne-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 				D8BD3770970D4687B0F8157E /* AdventPro-Regular.ttf */,
 				B893A2AE8B76494AB8D1CE82 /* AdventPro-SemiBold.ttf */,
 				5AB7D65CA2D74AAEA4BFE56B /* AdventPro-Thin.ttf */,
+				7ADF178D2ADD4FF093497E11 /* FredokaOne-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				5D0A98BC99024415A8063578 /* AdventPro-Regular.ttf in Resources */,
 				1D29FE125BEC403DA16111DD /* AdventPro-SemiBold.ttf in Resources */,
 				FD91F331B82749C69081AF68 /* AdventPro-Thin.ttf in Resources */,
+				BA2E4B8B76144AF690C94304 /* FredokaOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
