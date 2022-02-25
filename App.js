@@ -30,8 +30,14 @@ const App = () => {
           component={DashboardScreen}
           options={{
             headerShown:false,
-          }}/>
-        <Stack.Screen name="Prayer" component={PrayerScreen} />
+          }}
+        />
+        <Stack.Screen name="Prayer" 
+          component={PrayerScreen}
+          options={{
+            title:'Make a prayer request'
+          }}
+        />
         <Stack.Screen name="Bible" component={BibleScreen} />
         <Stack.Screen name="Testimonies" component={TestimoniesScreen} />
         <Stack.Screen name="Service" component={ServiceScreen} />

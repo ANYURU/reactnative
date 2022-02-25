@@ -14,6 +14,13 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		B7F71AA9F8C207E26EA0436C /* libPods-green-greenTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6417D0DAFD011F640F247C6 /* libPods-green-greenTests.a */; };
+		6DDD4206FDB64E678CCA8D11 /* AdventPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C563656BC285435C9E95A220 /* AdventPro-Bold.ttf */; };
+		E60E79AABAE245ADB731BB74 /* AdventPro-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F97970642054D66BAC7889D /* AdventPro-ExtraLight.ttf */; };
+		156ADEEA10354D74AE086DDC /* AdventPro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B83197B74CA4BCE82173F21 /* AdventPro-Light.ttf */; };
+		541575762B864F16AC3FC54F /* AdventPro-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AE44D9FF7404178BAD4ADAD /* AdventPro-Medium.ttf */; };
+		5D0A98BC99024415A8063578 /* AdventPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8BD3770970D4687B0F8157E /* AdventPro-Regular.ttf */; };
+		1D29FE125BEC403DA16111DD /* AdventPro-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B893A2AE8B76494AB8D1CE82 /* AdventPro-SemiBold.ttf */; };
+		FD91F331B82749C69081AF68 /* AdventPro-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5AB7D65CA2D74AAEA4BFE56B /* AdventPro-Thin.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,13 @@
 		C55123876352F9456ADD20C1 /* Pods-green.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-green.release.xcconfig"; path = "Target Support Files/Pods-green/Pods-green.release.xcconfig"; sourceTree = "<group>"; };
 		D08F08DF59CC72180148E393 /* Pods-green-greenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-green-greenTests.release.xcconfig"; path = "Target Support Files/Pods-green-greenTests/Pods-green-greenTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		C563656BC285435C9E95A220 /* AdventPro-Bold.ttf */ = {isa = PBXFileReference; name = "AdventPro-Bold.ttf"; path = "../assets/fonts/AdventPro-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3F97970642054D66BAC7889D /* AdventPro-ExtraLight.ttf */ = {isa = PBXFileReference; name = "AdventPro-ExtraLight.ttf"; path = "../assets/fonts/AdventPro-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8B83197B74CA4BCE82173F21 /* AdventPro-Light.ttf */ = {isa = PBXFileReference; name = "AdventPro-Light.ttf"; path = "../assets/fonts/AdventPro-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8AE44D9FF7404178BAD4ADAD /* AdventPro-Medium.ttf */ = {isa = PBXFileReference; name = "AdventPro-Medium.ttf"; path = "../assets/fonts/AdventPro-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D8BD3770970D4687B0F8157E /* AdventPro-Regular.ttf */ = {isa = PBXFileReference; name = "AdventPro-Regular.ttf"; path = "../assets/fonts/AdventPro-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B893A2AE8B76494AB8D1CE82 /* AdventPro-SemiBold.ttf */ = {isa = PBXFileReference; name = "AdventPro-SemiBold.ttf"; path = "../assets/fonts/AdventPro-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5AB7D65CA2D74AAEA4BFE56B /* AdventPro-Thin.ttf */ = {isa = PBXFileReference; name = "AdventPro-Thin.ttf"; path = "../assets/fonts/AdventPro-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +148,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				6676F8EDDC6E4FFCBEF58055 /* Pods */,
+				E696F55AC74B47C08AD9E77A /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -148,6 +163,21 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		E696F55AC74B47C08AD9E77A /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				C563656BC285435C9E95A220 /* AdventPro-Bold.ttf */,
+				3F97970642054D66BAC7889D /* AdventPro-ExtraLight.ttf */,
+				8B83197B74CA4BCE82173F21 /* AdventPro-Light.ttf */,
+				8AE44D9FF7404178BAD4ADAD /* AdventPro-Medium.ttf */,
+				D8BD3770970D4687B0F8157E /* AdventPro-Regular.ttf */,
+				B893A2AE8B76494AB8D1CE82 /* AdventPro-SemiBold.ttf */,
+				5AB7D65CA2D74AAEA4BFE56B /* AdventPro-Thin.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -245,6 +275,13 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				6DDD4206FDB64E678CCA8D11 /* AdventPro-Bold.ttf in Resources */,
+				E60E79AABAE245ADB731BB74 /* AdventPro-ExtraLight.ttf in Resources */,
+				156ADEEA10354D74AE086DDC /* AdventPro-Light.ttf in Resources */,
+				541575762B864F16AC3FC54F /* AdventPro-Medium.ttf in Resources */,
+				5D0A98BC99024415A8063578 /* AdventPro-Regular.ttf in Resources */,
+				1D29FE125BEC403DA16111DD /* AdventPro-SemiBold.ttf in Resources */,
+				FD91F331B82749C69081AF68 /* AdventPro-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
