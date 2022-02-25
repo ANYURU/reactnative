@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 import { withSafeAreaInsets } from "react-native-safe-area-context";
-import { COLORS } from '../helpers/constants'
+import { COLORS, FONTS } from '../helpers/constants'
 
 const GLOBAL_STYLES = StyleSheet.create({
     container:{
@@ -35,7 +35,8 @@ const GLOBAL_STYLES = StyleSheet.create({
 
     dashboardItemText:{
         'fontSize':20,
-        'fontWeight':'bold'
+        // 'fontWeight':'bold',
+        // 'fontFamily':''
     },
 
     dashboardItemPurple:{
@@ -56,8 +57,12 @@ const GLOBAL_STYLES = StyleSheet.create({
 
     dashboardItemPink:{
         backgroundColor:COLORS.PINK
-    }
+    },
 
+    dashboardFont:{
+        fontFamily:FONTS.PRIMARY
+
+    }
 
 
 })

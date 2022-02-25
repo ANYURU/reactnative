@@ -20,12 +20,14 @@ const PrayerScreen = () => {
     <Formik
       initialValues={{name:'', address:'', phone:'', request:''}}
       validateOnMount={true}
-      onSubmit={(values, {resetForm} )=> {
+      onSubmit={(values, {resetForm})=> {
         alert(JSON.stringify(values))
         resetForm()
       }}
       validationSchema={PRAYER_REQUEST_SCHEMA}
     >
+
+      
     {({ handleChange, handleBlur, handleSubmit, values, touched, errors, isValid}) => (
       <SafeAreaView>
         <TextInput

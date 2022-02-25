@@ -8,7 +8,7 @@ const DashboardScreen = ({navigation}) => {
       {/* <Text>Dashboard</Text> */}
       <TouchableOpacity style={[GLOBAL_STYLES.dashboardItem, GLOBAL_STYLES.dashboardItemPurple]} onPress={()=>{
           navigation.navigate('Prayer')
-      }}><Text style={GLOBAL_STYLES.dashboardItemText}>Prayer Request</Text></TouchableOpacity>
+      }}><Text style={[GLOBAL_STYLES.dashboardItemText, GLOBAL_STYLES.dashboardFont]}>Prayer Request</Text></TouchableOpacity>
       <TouchableOpacity style={[GLOBAL_STYLES.dashboardItem, GLOBAL_STYLES.dashboardItemOrange]} onPress={()=>{
           navigation.navigate('Bible')
       }}><Text style={GLOBAL_STYLES.dashboardItemText}>Bible Study</Text></TouchableOpacity>

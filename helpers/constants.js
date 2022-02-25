@@ -9,10 +9,10 @@ const COLORS = {
     PINK:'pink',
 }
 
-// const FONTS = {
+const FONTS = {
+    PRIMARY:'AdventPro-Medium',
 
-// }
+}
 
-// export {COLORS, FONTS}
+export {COLORS, FONTS}
 
-export {COLORS}
