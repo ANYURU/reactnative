@@ -1,8 +1,10 @@
-import { View, Text, TextInput, Item, Button, SafeAreaView } from 'react-native'
+import { View, Text, TextInput, Button, SafeAreaView, ActivityIndicator } from 'react-native'
 import React from 'react'
 import { Formik } from 'formik'
 import * as yup from 'yup'
 import { GLOBAL_STYLES } from '../styles/style'
+import { COLORS } from '../helpers/constants'
+import { NavigationContainer } from '@react-navigation/native'
 
 const PRAYER_REQUEST_SCHEMA = yup.object().shape({
   name: yup.string()
@@ -17,12 +19,36 @@ const PRAYER_REQUEST_SCHEMA = yup.object().shape({
 }) 
 
 const PrayerScreen = () => {
+  const [submitting, setSubmitting] = React.useState(false)
+  const [submitted, setSubmitted] = React.useState(false)
+
+  if(submitting) return <View style={[GLOBAL_STYLES.container, GLOBAL_STYLES.submitContainer]}>
+        <ActivityIndicator size="large" color={COLORS.PINK}/>
+      </View>
+
+  if(submitted) return <View style={[GLOBAL_STYLES.container, GLOBAL_STYLES.submitContainer]}>
+    <Text>Prayer request sent!</Text>
+    <Text>Go back to make more prayer requests</Text>
+    <Button
+    title="Go back"
+     onPress={() => {
+      setSubmitted(false)
+    }}/>
+  </View>
+  
+
   return (
     <Formik
       initialValues={{name:'', address:'', phone:'', request:''}}
       validateOnMount={true}
       onSubmit={(values, {resetForm})=> {
-        alert(JSON.stringify(values))
+        // alert(JSON.stringify(values))
+        setSubmitting(true)
+        setTimeout(()=>{
+          setSubmitting(false)
+          setSubmitted(true)
+        }, 5000)
+        
         resetForm()
 
         // You do some logic that sends information to the database
@@ -30,16 +56,17 @@ const PrayerScreen = () => {
       }}
       validationSchema={PRAYER_REQUEST_SCHEMA}
     >
-
-      
+  
+        
     {({ handleChange, handleBlur, handleSubmit, values, touched, errors, isValid}) => (
-      <SafeAreaView>
+      <SafeAreaView style={{paddingLeft:10, paddingRight:10}}>
         <TextInput
           onChangeText={handleChange('name')}
           onBlur={handleBlur('name')}
           value={values.name}
           placeholder='What is your name?'
-          style={(errors.name && touched.name) ? GLOBAL_STYLES.formInputTagError : GLOBAL_STYLES.formInputTagValid}
+          placeholderTextColor={COLORS.PURPLE}
+          style={GLOBAL_STYLES.field}
         />
         {(errors.name && touched.name) && <Text style={GLOBAL_STYLES.feedback}>{errors.name}</Text>}
 
@@ -48,9 +75,10 @@ const PrayerScreen = () => {
           onBlur={handleBlur('address')}
           value={values.address}
           placeholder='Where do you live?'
-          style={(errors.address && touched.address) ? GLOBAL_STYLES.formInputTagError:GLOBAL_STYLES.formInputTagValid}
+          placeholderTextColor={COLORS.PURPLE}
+          style={GLOBAL_STYLES.field}
         />
-        {(errors.address && touched.address) && <Text>{errors.address}</Text>}
+        {(errors.address && touched.address) && <Text style={GLOBAL_STYLES.feedback}>{errors.address}</Text>}
         
         <TextInput
           onChangeText={handleChange('phone')}
@@ -58,31 +86,37 @@ const PrayerScreen = () => {
           value={values.phone}
           keyboardType='phone-pad'
           placeholder='What is your phone number?'
-          style={(errors.phone && touched.phone) ? GLOBAL_STYLES.formInputTagError:GLOBAL_STYLES.formInputTagValid}
+          placeholderTextColor={COLORS.PURPLE}
+          style={GLOBAL_STYLES.field}
         />
-        {(errors.phone && touched.phone) && <Text>{errors.phone}</Text>}
+        {(errors.phone && touched.phone) && <Text style={GLOBAL_STYLES.feedback}>{errors.phone}</Text>}
       
         <TextInput
           onChangeText={handleChange('request')}
           onBlur={handleBlur('request')}
           value={values.request}
-          placeholder='Prayer request'
-          style={(errors.request && touched.request) ? GLOBAL_STYLES.formInputTagError:GLOBAL_STYLES.formInputTagValid}
+          placeholder='What do you want to pray for?'
+          placeholderTextColor={COLORS.PURPLE}
+          multiline={true}
+          style={GLOBAL_STYLES.field}
         />
-        {(errors.request && touched.request) && <Text>{errors.request}</Text>}
-  
+        {(errors.request && touched.request) && <Text style={GLOBAL_STYLES.feedback}>{errors.request}</Text>}
+
+      <View style={GLOBAL_STYLES.requestButton}>
         <Button
           rounded
           disabled={!isValid}
           title='Submit'
           onPress={handleSubmit}
-          style={{'width':30}}
+          color={COLORS.PURPLE}
         />
+      </View>
       </SafeAreaView>
 
     )}
     </Formik>
   )
 }
+
 
 export default PrayerScreen

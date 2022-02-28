@@ -30,17 +30,11 @@ const GLOBAL_STYLES = StyleSheet.create({
         'flex':1,
         'justifyContent':'center',
         'alignItems':'center',
-        'marginBottom':10,
-        
-        
+        'marginBottom':10,      
     },
 
     dashboardItemText:{
         fontSize:20,
-        // 'fontWeight':'bold',
-        // 'fontFamily':''
-        
-
     },
 
     dashboardItemPurple:{
@@ -80,7 +74,7 @@ const GLOBAL_STYLES = StyleSheet.create({
     },
 
     formInputTagValid:{
-        borderBottomColor:COLORS.GREEN,
+        borderBottomColor:COLORS.BLACK,
         borderBottomWidth:1,
         paddingLeft:10,
         paddingRight:10
@@ -88,7 +82,24 @@ const GLOBAL_STYLES = StyleSheet.create({
 
     feedback:{
         color:COLORS.RED,
-    }
+    },
+
+    requestButton:{
+        paddingTop:10,
+    },
+
+    field:{
+        borderBottomColor:COLORS.PURPLE,
+        borderBottomWidth:1,
+        color: COLORS.PURPLE,
+    }, 
+
+    submitContainer:{
+        backgroundColor: COLORS.PURPLE,
+        opacity:0.8
+    },
+
+
 
     
 
