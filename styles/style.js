@@ -31,12 +31,16 @@ const GLOBAL_STYLES = StyleSheet.create({
         'justifyContent':'center',
         'alignItems':'center',
         'marginBottom':10,
+        
+        
     },
 
     dashboardItemText:{
-        'fontSize':20,
+        fontSize:20,
         // 'fontWeight':'bold',
         // 'fontFamily':''
+        
+
     },
 
     dashboardItemPurple:{
@@ -68,6 +72,25 @@ const GLOBAL_STYLES = StyleSheet.create({
         fontFamily:FONTS.HEADINGS
     },
 
+    formInputTagError:{
+        borderBottomColor:COLORS.RED,
+        borderBottomWidth:1,
+        paddingLeft:10,
+        paddingRight:10
+    },
+
+    formInputTagValid:{
+        borderBottomColor:COLORS.GREEN,
+        borderBottomWidth:1,
+        paddingLeft:10,
+        paddingRight:10
+    },
+
+    feedback:{
+        color:COLORS.RED,
+    }
+
+    
 
 })
 

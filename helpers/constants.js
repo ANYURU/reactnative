@@ -7,11 +7,13 @@ const COLORS = {
     PURPLE:'purple',
     ORANGE:'orange',
     PINK:'pink',
+    RED:'red'
 }
 
 const FONTS = {
-    PRIMARY:'AdventPro-Medium',
+    BODY:'AdventPro-Medium',
     HEADINGS:'FredokaOne-Regular',
+    DEFAULTFONT:'AdventPro-Light',
 }
 
 export {COLORS, FONTS}

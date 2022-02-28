@@ -2,6 +2,7 @@ import { View, Text, TextInput, Item, Button, SafeAreaView } from 'react-native'
 import React from 'react'
 import { Formik } from 'formik'
 import * as yup from 'yup'
+import { GLOBAL_STYLES } from '../styles/style'
 
 const PRAYER_REQUEST_SCHEMA = yup.object().shape({
   name: yup.string()
@@ -23,6 +24,9 @@ const PrayerScreen = () => {
       onSubmit={(values, {resetForm})=> {
         alert(JSON.stringify(values))
         resetForm()
+
+        // You do some logic that sends information to the database
+        
       }}
       validationSchema={PRAYER_REQUEST_SCHEMA}
     >
@@ -34,15 +38,17 @@ const PrayerScreen = () => {
           onChangeText={handleChange('name')}
           onBlur={handleBlur('name')}
           value={values.name}
-          placeholder='Name'
+          placeholder='What is your name?'
+          style={(errors.name && touched.name) ? GLOBAL_STYLES.formInputTagError : GLOBAL_STYLES.formInputTagValid}
         />
-        {(errors.name && touched.name) && <Text>{errors.name}</Text>}
+        {(errors.name && touched.name) && <Text style={GLOBAL_STYLES.feedback}>{errors.name}</Text>}
 
         <TextInput
           onChangeText={handleChange('address')}
           onBlur={handleBlur('address')}
           value={values.address}
-          placeholder='Address'
+          placeholder='Where do you live?'
+          style={(errors.address && touched.address) ? GLOBAL_STYLES.formInputTagError:GLOBAL_STYLES.formInputTagValid}
         />
         {(errors.address && touched.address) && <Text>{errors.address}</Text>}
         
@@ -51,15 +57,17 @@ const PrayerScreen = () => {
           onBlur={handleBlur('phone')}
           value={values.phone}
           keyboardType='phone-pad'
-          placeholder='Phone Number'
+          placeholder='What is your phone number?'
+          style={(errors.phone && touched.phone) ? GLOBAL_STYLES.formInputTagError:GLOBAL_STYLES.formInputTagValid}
         />
-        {(errors.phone && touched.address) && <Text>{errors.phone}</Text>}
+        {(errors.phone && touched.phone) && <Text>{errors.phone}</Text>}
       
         <TextInput
           onChangeText={handleChange('request')}
           onBlur={handleBlur('request')}
           value={values.request}
           placeholder='Prayer request'
+          style={(errors.request && touched.request) ? GLOBAL_STYLES.formInputTagError:GLOBAL_STYLES.formInputTagValid}
         />
         {(errors.request && touched.request) && <Text>{errors.request}</Text>}
   

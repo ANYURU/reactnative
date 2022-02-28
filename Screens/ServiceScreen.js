@@ -10,7 +10,6 @@ const ServiceScreen = () => {
         play={true}
         videoId={'84WIaK3bl_s'}
       />
-
     </View>
   )
 }
