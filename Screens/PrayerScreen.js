@@ -4,6 +4,7 @@ import { Formik } from 'formik'
 import * as yup from 'yup'
 import { GLOBAL_STYLES } from '../styles/style'
 import { COLORS } from '../helpers/constants'
+import CustomActivityIndicator from '../components/CustomActivityIndicator'
 import { NavigationContainer } from '@react-navigation/native'
 
 const PRAYER_REQUEST_SCHEMA = yup.object().shape({
@@ -22,9 +23,9 @@ const PrayerScreen = ({navigation}) => {
   const [submitting, setSubmitting] = React.useState(false)
   const [submitted, setSubmitted] = React.useState(false)
 
-  if(submitting) return <View style={[GLOBAL_STYLES.container, GLOBAL_STYLES.submitContainer]}>
+  if(submitting) return <CustomActivityIndicator>
         <ActivityIndicator size="large" color={COLORS.PINK}/>
-      </View>
+      </CustomActivityIndicator>
 
   if(submitted) return <View style={[GLOBAL_STYLES.container, GLOBAL_STYLES.submitContainer]}>
     <Text>Prayer request sent!</Text>
