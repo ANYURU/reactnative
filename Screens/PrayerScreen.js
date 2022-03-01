@@ -18,7 +18,7 @@ const PRAYER_REQUEST_SCHEMA = yup.object().shape({
     .required('Prayer details are required.'),
 }) 
 
-const PrayerScreen = () => {
+const PrayerScreen = ({navigation}) => {
   const [submitting, setSubmitting] = React.useState(false)
   const [submitted, setSubmitted] = React.useState(false)
 
@@ -33,6 +33,7 @@ const PrayerScreen = () => {
     title="Go back"
      onPress={() => {
       setSubmitted(false)
+      navigation.setOptions({headerShown: true});
     }}/>
   </View>
   
@@ -48,6 +49,7 @@ const PrayerScreen = () => {
           setSubmitting(false)
           setSubmitted(true)
         }, 5000)
+        navigation.setOptions({headerShown: false});
         
         resetForm()
 
