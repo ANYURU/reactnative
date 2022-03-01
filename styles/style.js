@@ -98,11 +98,6 @@ const GLOBAL_STYLES = StyleSheet.create({
         backgroundColor: COLORS.PURPLE,
         opacity:0.8
     },
-
-
-
-    
-
 })
 
 export {GLOBAL_STYLES, COLORS}

@@ -28,14 +28,13 @@ const PrayerScreen = ({navigation}) => {
       </CustomActivityIndicator>
 
   if(submitted) return <View style={[GLOBAL_STYLES.container, GLOBAL_STYLES.submitContainer]}>
-    <Text>Prayer request sent!</Text>
-    <Text>Go back to make more prayer requests</Text>
+    <Text style={{fontSize:15, textAlign:'center', color:'white'}}>Prayer request sent!</Text>
     <Button
     title="Go back"
      onPress={() => {
-      setSubmitted(false)
-      navigation.setOptions({headerShown: true});
-    }}/>
+       setSubmitted(false)
+       navigation.setOptions({headerShown: true});
+      }}/>
   </View>
   
 
