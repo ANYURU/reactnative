@@ -9,8 +9,8 @@ import { SearchBar } from 'react-native-screens'
 const Header =() => {
   return (
     <View style={GLOBAL_STYLES.flatListHeader}>
-      <SearchBar
-        placeHolder='Search'
+      <TextInput
+        placeholder='Search'
       />
     </View>
   )
@@ -19,10 +19,10 @@ const Header =() => {
 const Footer = () => {
   return (
     <View style={GLOBAL_STYLES.flatListFooter}>
-      <FAIcon name="microphone" size={30} color="gray"/>
-      <FAIcon name="play" size={30} color="gray"/>
-      <FAIcon name="paperclip" size={30} color="gray"/>
-      <FAIcon name="paper-plane" size={30} color="blue"/>
+      <FAIcon name="microphone" size={20} color="red"/>
+      <FAIcon name="play" size={20} color="black"/>
+      <FAIcon name="paperclip" size={20} color="black"/>
+      <FAIcon name="paper-plane" size={20} color="black"/>
     </View>
   )
 }
