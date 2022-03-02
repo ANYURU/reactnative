@@ -135,6 +135,10 @@ const GLOBAL_STYLES = StyleSheet.create({
         flex:17, 
         // borderWidth:1, 
         // borderColor:COLORS.RED,
+    },
+    flatListPhoto:{
+        height:55,
+        width:55
     }
 
 })

@@ -1,4 +1,4 @@
-import { View, Text, FlatList, SafeAreaView, TextInput } from 'react-native'
+import { View, Text, FlatList, Image, TextInput } from 'react-native'
 import React from 'react'
 import DATA from '../helpers/bible-studies'
 import Icon from 'react-native-vector-icons/Feather'
@@ -31,7 +31,7 @@ const Item = ({item}) => {
   const {title, date, time, preacher, photo} = item
   return(
     <View style={GLOBAL_STYLES.flatListItem}>
-      {/* <Image source={require('../assets/media/images/wycliff.png')}/> */}
+      <Image source={photo} style={GLOBAL_STYLES.flatListPhoto}/>
       <View style={GLOBAL_STYLES.flatListItemText}>
         <Text>{title}</Text>
         <Text>{date} | {time} | {preacher}</Text>

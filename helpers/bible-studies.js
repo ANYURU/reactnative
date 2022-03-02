@@ -5,7 +5,7 @@ const DATA = [
         date:"2020-16-06",
         time:"32.5mins",
         preacher:"Wycliff",
-        photo: "../assets/media/images/wycliff.png"
+        photo: require('../assets/media/images/wycliff.png')
     },
     {
         id:"2",
@@ -13,7 +13,7 @@ const DATA = [
         date:"2021-16-06",
         time:"55mins",
         preacher:"Pastor Kato",
-        photo: "../assets/media/images/wycliff.png"
+        photo: require('../assets/media/images/wycliff.png')
     },
     {
         id:"3",
@@ -21,7 +21,7 @@ const DATA = [
         date:"2021-01-05",
         time:"40mins",
         preacher:"Apostle Grace",
-        photo: "../assets/media/images/wycliff.png"
+        photo: require('../assets/media/images/wycliff.png')
     },
     {
         id:"4",
@@ -29,7 +29,7 @@ const DATA = [
         date:"2021-01-05",
         time:"40mins",
         preacher:"Apostle Grace",
-        photo: "../assets/media/images/wycliff.png"
+        photo: require('../assets/media/images/wycliff.png')
     },
     {
         id:"5",
@@ -37,7 +37,7 @@ const DATA = [
         date:"2021-01-05",
         time:"40mins",
         preacher:"Apostle Grace",
-        photo: "../assets/media/images/wycliff.png"
+        photo: require('../assets/media/images/wycliff.png')
     },
     {
         id:"6",
@@ -45,7 +45,7 @@ const DATA = [
         date:"2021-01-05",
         time:"40mins",
         preacher:"Apostle Grace",
-        photo: "../assets/media/images/wycliff.png"
+        photo:require('../assets/media/images/wycliff.png')
     },
    
 ]
