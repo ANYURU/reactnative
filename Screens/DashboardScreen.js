@@ -7,7 +7,10 @@ const DashboardScreen = ({navigation}) => {
     <View style={GLOBAL_STYLES.dashboard}>
       {/* <Text>Dashboard</Text> */}
         <TouchableOpacity 
-            style={[GLOBAL_STYLES.dashboardItem, GLOBAL_STYLES.dashboardItemPurple]} 
+            style={[
+                GLOBAL_STYLES.dashboardItem, 
+                GLOBAL_STYLES.dashboardItemPurple
+            ]} 
             onPress={()=>{
             navigation.navigate('Prayer')
             }}
@@ -20,7 +23,8 @@ const DashboardScreen = ({navigation}) => {
             >Prayer Request
             </Text>
         </TouchableOpacity>
-        <TouchableOpacity style={[GLOBAL_STYLES.dashboardItem, GLOBAL_STYLES.dashboardItemOrange]} onPress={()=>{
+        <TouchableOpacity 
+            style={[GLOBAL_STYLES.dashboardItem, GLOBAL_STYLES.dashboardItemOrange]} onPress={()=>{
             navigation.navigate('Bible')
         }}>
             <Text style={[

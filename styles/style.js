@@ -109,8 +109,6 @@ const GLOBAL_STYLES = StyleSheet.create({
     flatListItemText:{
         paddingHorizontal:10,
         flex:2,
-        
-
     },
     flatListItemIcons:{
         flex:1,
@@ -139,8 +137,13 @@ const GLOBAL_STYLES = StyleSheet.create({
     flatListPhoto:{
         height:55,
         width:55
-    }
-
+    },
+    flatListTitleText:{
+        fontWeight:'bold',
+    },  
+    flatListNormalText: {
+        fontSize:10,
+    },
 })
 
 export {GLOBAL_STYLES, COLORS}

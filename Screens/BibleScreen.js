@@ -33,8 +33,8 @@ const Item = ({item}) => {
     <View style={GLOBAL_STYLES.flatListItem}>
       <Image source={photo} style={GLOBAL_STYLES.flatListPhoto}/>
       <View style={GLOBAL_STYLES.flatListItemText}>
-        <Text>{title}</Text>
-        <Text>{date} | {time} | {preacher}</Text>
+        <Text style={GLOBAL_STYLES.flatListTitleText}>{title}</Text>
+        <Text stle={GLOBAL_STYLES.flatListNormalText}>{date} | {time} | {preacher}</Text>
       </View>
       <View style={GLOBAL_STYLES.flatListItemIcons}>
         <Icon name="stop-circle" size={30} color="red"/>
@@ -44,7 +44,9 @@ const Item = ({item}) => {
   )
 }
 
-const BibleScreen = () => {
+const BibleScreen = ({navigation}) => {
+  navigation.setOptions({headerTitle: ()=><Header />})
+
   const renderItem = (item) => <Item {...item} />
   return (
     <View style={{flex:1}} >
@@ -54,7 +56,6 @@ const BibleScreen = () => {
           renderItem={renderItem}
           keyExtractor={item => item.id}
           ItemSeparatorComponent ={()=><View style={GLOBAL_STYLES.flatListItemSeparator}></View>}
-          ListHeaderComponent={()=><Header />}
         />
       </View>
       <Footer style={GLOBAL_STYLES.flatListFooter}/>
