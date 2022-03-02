@@ -28,7 +28,7 @@ const Footer = () => {
 }
 
 const Item = ({item, playing, setPlaying}) => {
-  const {title, date, time, preacher, photo} = item
+  const {title, date, time, preacher, photo, id} = item
   return(
     <View style={GLOBAL_STYLES.flatListItem}>
       <Image source={photo} style={GLOBAL_STYLES.flatListPhoto}/>
