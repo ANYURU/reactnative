@@ -54,9 +54,6 @@ const Item = ({item, playing, setPlaying}) => {
               <Icon name={playing === id ? "pause-circle": "play-circle"} size={20} color="black"/>
             </TouchableOpacity>
           )
-          
-
-          
         }
         
       </View>

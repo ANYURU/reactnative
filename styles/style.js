@@ -136,7 +136,8 @@ const GLOBAL_STYLES = StyleSheet.create({
     },
     flatListPhoto:{
         height:55,
-        width:55
+        width:55,
+        borderRadius:55/2
     },
     flatListTitleText:{
         fontWeight:'bold',
