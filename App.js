@@ -38,7 +38,12 @@ const App = () => {
             title:'Make a prayer request'
           }}
         />
-        <Stack.Screen name="Bible" component={BibleScreen} />
+        <Stack.Screen name="Bible" 
+          component={BibleScreen} 
+          options={{
+            title:"Bible lessons"
+          }}
+          />
         <Stack.Screen name="Testimonies" component={TestimoniesScreen} />
         <Stack.Screen name="Service" component={ServiceScreen} />
         <Stack.Screen name="Cell" component={CellScreen} />

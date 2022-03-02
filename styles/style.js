@@ -127,7 +127,7 @@ const GLOBAL_STYLES = StyleSheet.create({
         flexDirection:'row',
         flex:1, 
         padding:10,
-        // borderWidth:1
+        backgroundColor:COLORS.PURPLE,
     },
     flatListContainer:{
         flex:17, 
@@ -145,6 +145,11 @@ const GLOBAL_STYLES = StyleSheet.create({
     flatListNormalText: {
         fontSize:10,
     },
+    flatListHeader:{
+        flexDirection:'row',
+        alignItems:'center',
+        
+    }
 })
 
 export {GLOBAL_STYLES, COLORS}

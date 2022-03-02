@@ -2,16 +2,18 @@ import { View, Text, FlatList, Image, TextInput, Touchable, TouchableOpacity } f
 import React from 'react'
 import DATA from '../helpers/bible-studies'
 import Icon from 'react-native-vector-icons/Feather'
-import FAIcon from 'react-native-vector-icons/FontAwesome5'
+import FAIcon from 'react-native-vector-icons/FontAwesome'
 import { GLOBAL_STYLES } from '../styles/style'
-import { SearchBar } from 'react-native-screens'
+import { COLORS } from '../styles/style'
 
 const Header =() => {
   return (
-    <View style={GLOBAL_STYLES.flatListHeader}>
-      <TextInput
-        placeholder='Search'
-      />
+    <View style={GLOBAL_STYLES.flatListHeader}>      
+    
+        <TouchableOpacity>
+          <FAIcon name="search" size={20} color="black"/>
+        </TouchableOpacity>
+      
     </View>
   )
 }
@@ -19,10 +21,10 @@ const Header =() => {
 const Footer = () => {
   return (
     <View style={GLOBAL_STYLES.flatListFooter}>
-      <FAIcon name="microphone" size={20} color="red"/>
-      <FAIcon name="play" size={20} color="black"/>
-      <FAIcon name="paperclip" size={20} color="black"/>
-      <FAIcon name="paper-plane" size={20} color="black"/>
+      <FAIcon name="microphone" size={20} color={COLORS.WHITE}/>
+      <FAIcon name="play" size={20} color={COLORS.WHITE}/>
+      <FAIcon name="paperclip" size={20} color={COLORS.WHITE}/>
+      <FAIcon name="paper-plane" size={20} color={COLORS.WHITE}/>
     </View>
   )
 }
@@ -41,10 +43,10 @@ const Item = ({item, playing, setPlaying}) => {
           playing === id ? (
             <> 
               <TouchableOpacity onPress={()=> setPlaying(null)}>
-                <Icon name="pause-circle" size={20} color="gray"/>
+                <Icon name="stop-circle" size={20} color="red"/>
               </TouchableOpacity>
               <TouchableOpacity onPress={()=>setPlaying(null)}>
-                <Icon name="stop-circle" size={20} color="red"/>
+                <Icon name="pause-circle" size={20} color="gray"/>
               </TouchableOpacity>
             </>
           )
@@ -62,7 +64,10 @@ const Item = ({item, playing, setPlaying}) => {
 }
 
 const BibleScreen = ({navigation}) => {
-  navigation.setOptions({headerTitle: ()=><Header />})
+  navigation.setOptions({
+    // headerTitle: ()=><Header />,
+    headerRight: ()=><Header />
+  })
 
   const [playing, setPlaying] = React.useState(null)
 
