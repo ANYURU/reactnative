@@ -1,4 +1,4 @@
-import { View, Text, FlatList, Image, TextInput } from 'react-native'
+import { View, Text, FlatList, Image, TextInput, Touchable, TouchableOpacity } from 'react-native'
 import React from 'react'
 import DATA from '../helpers/bible-studies'
 import Icon from 'react-native-vector-icons/Feather'
@@ -27,7 +27,7 @@ const Footer = () => {
   )
 }
 
-const Item = ({item}) => {
+const Item = ({item, playing, setPlaying}) => {
   const {title, date, time, preacher, photo} = item
   return(
     <View style={GLOBAL_STYLES.flatListItem}>
@@ -37,8 +37,28 @@ const Item = ({item}) => {
         <Text stle={GLOBAL_STYLES.flatListNormalText}>{date} | {time} | {preacher}</Text>
       </View>
       <View style={GLOBAL_STYLES.flatListItemIcons}>
-        <Icon name="stop-circle" size={30} color="red"/>
-        <Icon name="play-circle" size={30} color="black"/>
+        {
+          playing === id ? (
+            <> 
+              <TouchableOpacity onPress={()=> setPlaying(null)}>
+                <Icon name="pause-circle" size={20} color="gray"/>
+              </TouchableOpacity>
+              <TouchableOpacity onPress={()=>setPlaying(null)}>
+                <Icon name="stop-circle" size={20} color="red"/>
+              </TouchableOpacity>
+            </>
+          )
+          :
+          (
+            <TouchableOpacity onPress={() => setPlaying(id)}>
+              <Icon name={playing === id ? "pause-circle": "play-circle"} size={20} color="black"/>
+            </TouchableOpacity>
+          )
+          
+
+          
+        }
+        
       </View>
     </View>
   )
@@ -47,7 +67,9 @@ const Item = ({item}) => {
 const BibleScreen = ({navigation}) => {
   navigation.setOptions({headerTitle: ()=><Header />})
 
-  const renderItem = (item) => <Item {...item} />
+  const [playing, setPlaying] = React.useState(null)
+
+  const renderItem = (item) => <Item {...item} playing={playing} setPlaying={setPlaying}/>
   return (
     <View style={{flex:1}} >
       <View style={GLOBAL_STYLES.flatListContainer}>
