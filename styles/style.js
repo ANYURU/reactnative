@@ -98,6 +98,45 @@ const GLOBAL_STYLES = StyleSheet.create({
         backgroundColor: COLORS.PURPLE,
         opacity:0.8
     },
+    sucessText:{
+        color:COLORS.GREEN
+    },
+    flatListItem:{
+        flex:1,
+        flexDirection:'row',
+        padding:10
+    },
+    flatListItemText:{
+        paddingHorizontal:10,
+        flex:2,
+        
+
+    },
+    flatListItemIcons:{
+        flex:1,
+        justifyContent:'flex-end',
+        flexDirection:'row',
+        // borderWidth:1,
+        alignItems:'center'
+    },
+    flatListItemSeparator:{
+        borderTopWidth:1, 
+        marginLeft:10, 
+        borderTopColor:COLORS.PURPLE
+    },
+    flatListFooter:{
+        justifyContent:'space-between',
+        flexDirection:'row',
+        flex:1, 
+        padding:10,
+        // borderWidth:1
+    },
+    flatListContainer:{
+        flex:17, 
+        // borderWidth:1, 
+        // borderColor:COLORS.RED,
+    }
+
 })
 
 export {GLOBAL_STYLES, COLORS}

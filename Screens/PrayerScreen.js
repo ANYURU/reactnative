@@ -30,8 +30,8 @@ const PrayerScreen = ({navigation}) => {
   if(submitted) return <View style={[GLOBAL_STYLES.container, GLOBAL_STYLES.submitContainer]}>
     <Text style={{fontSize:15, textAlign:'center', color:'white'}}>Prayer request sent!</Text>
     <Button
-    title="Go back"
-     onPress={() => {
+      title="Go back"
+      onPress={() => {
        setSubmitted(false)
        navigation.setOptions({headerShown: true});
       }}/>
@@ -44,8 +44,8 @@ const PrayerScreen = ({navigation}) => {
       validateOnMount={true}
       onSubmit={(values, {resetForm})=> {
         // alert(JSON.stringify(values))
-        setSubmitting(true)
-        setTimeout(()=>{
+          setSubmitting(true)
+          setTimeout(()=>{
           setSubmitting(false)
           setSubmitted(true)
         }, 5000)
