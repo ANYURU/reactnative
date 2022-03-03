@@ -7,7 +7,9 @@ const COLORS = {
     PURPLE:'purple',
     ORANGE:'orange',
     PINK:'pink',
-    RED:'red'
+    RED:'red',
+    GREY:'grey',
+    LIGHTGREY:'light grey'
 }
 
 const FONTS = {

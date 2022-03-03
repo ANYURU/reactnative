@@ -8,7 +8,26 @@ const GLOBAL_STYLES = StyleSheet.create({
         'justifyContent':'center',
         'alignItems':'center'
     },
-
+    customHeader:{
+        paddingTop:10,
+        borderBottomWidth: 1,
+        BorderCottom: COLORS.LIGHTGREY
+    },
+    stickTopContainer: {
+        backgroundColor: COLORS.WHITE,
+        zIndex:999,
+        position:'absolute',
+        top:0,
+        width:'100%',
+        paddingHorizonatl:10,
+    },
+    flexRow:{
+        flexDirection:'row',
+        alighItems:'center',
+    },
+    spaceHorizontal: {
+        paddingHorizontal:10,
+    },
     button: {
         'backgroundColor':'red',
         'width':'100%',
@@ -19,7 +38,16 @@ const GLOBAL_STYLES = StyleSheet.create({
         'color': COLORS.WHITE,
         'textAlign':'center',
     }, 
-
+    greyButton:{
+        backgroundColor:COLORS.LIGHTGREY,
+        paddingVertical:2,
+        paddingHorizontal:10,
+        borderRadius:40,
+        marginRight:5
+    },
+    iconText:{
+        paddingLeft:5,
+    },
     dashboard:{
         'flex':1,
         'justifyContent':'space-between',
@@ -87,7 +115,18 @@ const GLOBAL_STYLES = StyleSheet.create({
     requestButton:{
         paddingTop:10,
     },
-
+    searchField:{
+        margin:0,
+        padding:0,
+        width:'90%'
+    },
+    searchFieldContainer:{
+        backgroundColor: COLORS.LIGHTGREY,
+        borderRadius: 20,
+        padding: 2, 
+        paddingLeft:15,
+        marginLeft: 15,
+    },
     field:{
         borderBottomColor:COLORS.PURPLE,
         borderBottomWidth:1,
@@ -147,8 +186,7 @@ const GLOBAL_STYLES = StyleSheet.create({
     },
     flatListHeader:{
         flexDirection:'row',
-        alignItems:'center',
-        
+        alignItems:'center',    
     }
 })
 

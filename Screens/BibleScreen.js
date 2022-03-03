@@ -6,14 +6,59 @@ import FAIcon from 'react-native-vector-icons/FontAwesome'
 import { GLOBAL_STYLES } from '../styles/style'
 import { COLORS } from '../styles/style'
 
-const Header =() => {
+
+const SearchHeader = ({navigation}) => {
+  return (
+    <View style={[GLOBAL_STYLES.spaceHorizontal, GLOBAL_STYLES.customHeader]}>
+      <View style={[GLOBAL_STYLES.flexRow, {justifyContent:'center'}]}>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
+          <Icon 
+            name="arrow-left"
+            size={25}
+            stroke={2}
+            color={COLORS.BLACK}
+          />
+        </TouchableOpacity>
+        <View style={[GLOBAL_STYLES.flexRow, GLOBAL_STYLES.searchFieldContainer]}>
+          <TextInput
+            placeholder="Search"
+            style={[GLOBAL_STYLES.searchField]}
+          />
+          <TouchableOpacity>
+            <Icon name="x" size={20} color={COLORS.BLACK}/>
+          </TouchableOpacity>
+        </View>
+      </View>     
+      <View style={[GLOBAL_STYLES.flexRow,{marginVertical:15}]}>
+        <TouchableOpacity
+          style={[
+            GLOBAL_STYLES.flexRow,
+            GLOBAL_STYLES.geyBUtton
+          ]}
+        >
+          <FAIcon name="calendar" size={10} color={COLORS.WHITE}/>
+          <Text style={[GLOBAL_STYLES.iconText]}>Date</Text>
+        </TouchableOpacity>
+        <TouchableOpacity 
+          style={[
+            GLOBAL_STYLES.flexRow, 
+            GLOBAL_STYLES.greyButton
+          ]}
+        >
+          <FAIcon name="users" size={10}  color={COLORS.WHITE}/>
+          <Text style={[GLOBAL_STYLES.iconText]}>Preachers</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  )
+}
+const Header = ({switchHeader}) => {
+  
   return (
     <View style={GLOBAL_STYLES.flatListHeader}>      
-    
-        <TouchableOpacity>
-          <FAIcon name="search" size={20} color="black"/>
-        </TouchableOpacity>
-      
+      <TouchableOpacity onPress={()=>switchHeader(false)}>
+        <FAIcon name="search" size={20} color="black"/>
+      </TouchableOpacity>
     </View>
   )
 }
@@ -64,9 +109,16 @@ const Item = ({item, playing, setPlaying}) => {
 }
 
 const BibleScreen = ({navigation}) => {
+  const [header, setHeader] = React.useState(true)
+
   navigation.setOptions({
     // headerTitle: ()=><Header />,
-    headerRight: ()=><Header />
+    headerLeft:() => <TouchableOpacity style={{paddingRight:10, paddingLeft:10}} onPress={() => navigation.goBack()}>
+      <Icon name="home" size={25} color={COLORS.BLACK}/>
+    </TouchableOpacity>,
+    headerRight:()=><Header switchHeader={setHeader}/>,
+    headerShown:header,
+    
   })
 
   const [playing, setPlaying] = React.useState(null)
@@ -74,6 +126,11 @@ const BibleScreen = ({navigation}) => {
   const renderItem = (item) => <Item {...item} playing={playing} setPlaying={setPlaying}/>
   return (
     <View style={{flex:1}} >
+      {
+        !header && <SearchHeader navigation={navigation}/>
+      }
+        
+    
       <View style={GLOBAL_STYLES.flatListContainer}>
         <FlatList 
           data={DATA}

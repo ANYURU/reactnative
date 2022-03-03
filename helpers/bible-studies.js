@@ -47,6 +47,54 @@ const DATA = [
         preacher:"Apostle Grace",
         photo:require('../assets/media/images/wycliff.png')
     },
+    {
+        id:"7",
+        title:"Recognising the voice of God",
+        date:"2021-01-05",
+        time:"40mins",
+        preacher:"Apostle Grace",
+        photo:require('../assets/media/images/wycliff.png')
+    },
+    {
+        id:"8",
+        title:"Recognising the voice of God",
+        date:"2021-01-05",
+        time:"40mins",
+        preacher:"Apostle Grace",
+        photo:require('../assets/media/images/wycliff.png')
+    },
+    {
+        id:"9",
+        title:"Recognising the voice of God",
+        date:"2021-01-05",
+        time:"40mins",
+        preacher:"Apostle Grace",
+        photo:require('../assets/media/images/wycliff.png')
+    },
+    {
+        id:"10",
+        title:"Recognising the voice of God",
+        date:"2021-01-05",
+        time:"40mins",
+        preacher:"Apostle Grace",
+        photo:require('../assets/media/images/wycliff.png')
+    },
+    {
+        id:"11",
+        title:"Recognising the voice of God",
+        date:"2021-01-05",
+        time:"40mins",
+        preacher:"Apostle Grace",
+        photo:require('../assets/media/images/wycliff.png')
+    },
+    {
+        id:"12",
+        title:"Recognising the voice of God",
+        date:"2021-01-05",
+        time:"40mins",
+        preacher:"Apostle Grace",
+        photo:require('../assets/media/images/wycliff.png')
+    },
    
 ]
 
