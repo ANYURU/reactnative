@@ -192,4 +192,31 @@ const GLOBAL_STYLES = StyleSheet.create({
     }
 })
 
+const OVERLAY_STYLES = {
+    container:{
+        backgroundColor:COLORS.BLACK,
+        justifyContent:'flex-end'
+
+    },
+    contentWrapper:{
+        backgroundColor:WHITE,
+        borderTopLeftRadius: 20,
+        paddingHorizontal: 10,
+
+    },
+    title:{
+        flexDirection:'row',
+        borderBottomColor:COLORS.LIGHTGREY,
+        borderBottomWidth: 1
+
+    },
+    titleIconColor:{
+
+    },
+    titleText:{
+        color:COLORS.GREY
+
+    }
+}
+
 export {GLOBAL_STYLES, COLORS}

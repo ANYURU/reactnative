@@ -1,18 +1,26 @@
-import { View, Text, FlatList, Image, TextInput, Touchable, TouchableOpacity } from 'react-native'
+import { 
+  View,
+  Text, 
+  FlatList, 
+  Image, 
+  TextInput, 
+  TouchableOpacity 
+} from 'react-native'
 import React from 'react'
-import DATA from '../helpers/bible-studies'
-import Icon from 'react-native-vector-icons/Feather'
-import FAIcon from 'react-native-vector-icons/FontAwesome'
-import { GLOBAL_STYLES } from '../styles/style'
-import { COLORS } from '../styles/style'
+import RNFetchBlob from 'rn-fetch-blob'
 import AudioRecorderPlayer, {
-  AVEncoderAudioQualityIOSType,
-  AVEncodingOption,
-  AudioEncoderAndroidType,
+AVEncoderAudioQualityIOSType,
+AVEncodingOption,
+AudioEncoderAndroidType,
   AudioSet,
   AudioSourceAndroidType,
 } from 'react-native-audio-recorder-player'
-import RNFetchBlob from 'rn-fetch-blob'
+
+import Icon from 'react-native-vector-icons/Feather'
+import FAIcon from 'react-native-vector-icons/FontAwesome'
+import DATA from '../helpers/bible-studies'
+import { GLOBAL_STYLES } from '../styles/style'
+import { COLORS } from '../styles/style'
 
 
 
@@ -82,6 +90,15 @@ const Footer = () => {
     playTime:'00:00:00',
     duration:'00:00:00'
   })
+  
+  const audioRecorderPlayer = new AudioRecorderPlayer()
+  audioRecorderPlayer.setSubscriptionDuration(0.09)
+  const dirs = RNFetchBlob.fs.dirs;
+  const path = Platform.select({
+    ios: 'trial.m4a',
+    android: `${dirs.CacheDir}/trial.mp3`,
+  });
+  
 
   const onStartRecord = async () => {
     // if (Platform.OS === 'android') {
@@ -116,11 +133,6 @@ const Footer = () => {
 
     // const path = 'sample.mp3'
 
-    const dirs = RNFetchBlob.fs.dirs;
-    const path = Platform.select({
-      ios: 'trial.m4a',
-      android: `${dirs.CacheDir}/trial.mp3`,
-    });
 
     // const uri = await audioRecorderPlayer.startRecorder(path);
 
@@ -137,7 +149,7 @@ const Footer = () => {
     const  uri = await audioRecorderPlayer.startRecorder(path, audioSet);
 
     audioRecorderPlayer.addRecordBackListener((e) => {
-      console.log(e)
+      // console.log(e)
       setPlayer({
         ...player,
         recordSecs: e.current_position,
@@ -161,7 +173,7 @@ const Footer = () => {
     const  path = 'sample.m4a'
     const msg = await audioRecorderPlayer.startPlayer(path)
     audioRecorderPlayer.setVolume(1.0)
-    console.log(msg)
+    // console.log(msg)
     audioRecorderPlayer.addRecordBackListener((e) => {
       if (e.current_position === e.duration) {
         console.log('finished')
@@ -187,10 +199,12 @@ const Footer = () => {
     await audioRecorderPlayer.stopPlayer();
     audioRecorderPlayer.removePlayBackListener()
   }
-  const audioRecorderPlayer = new AudioRecorderPlayer()
-  audioRecorderPlayer.setSubscriptionDuration(0.09)
   return (
     <>
+      <View>
+        <Text>{player.recordTime}</Text>
+        <Text>{player.recordSecs}</Text>
+      </View>
       <View style={GLOBAL_STYLES.flatListFooter}>
         <TouchableOpacity onPress={()=>onStartRecord()}>
           <FAIcon name="microphone" size={20} color={COLORS.WHITE}/>
@@ -261,7 +275,8 @@ const BibleScreen = ({navigation}) => {
   React.useEffect(() => {
     navigation.setOptions({
       // headerTitle: ()=><Header />,
-      headerLeft:() => <TouchableOpacity style={{paddingRight:10, paddingLeft:10}} onPress={() => navigation.goBack()}>
+      headerLeft:() => <TouchableOpacity style={{paddingRight:10, paddingLeft:10}} 
+        onPress={() => navigation.goBack()}>
         <Icon name="home" size={25} color={COLORS.BLACK}/>
       </TouchableOpacity>,
       headerRight:()=><Header switchHeader={setHeader}/>,
@@ -270,7 +285,7 @@ const BibleScreen = ({navigation}) => {
   }, [header])
 
   const [playing, setPlaying] = React.useState(null)
-
+  
   const renderItem = (item) => <Item {...item} playing={playing} setPlaying={setPlaying}/>
   return (
     <View style={{flex:1}} >
