@@ -54,7 +54,6 @@ const DashboardScreen = ({navigation}) => {
         }}><Text style={[GLOBAL_STYLES.dashboardItemText, GLOBAL_STYLES.headings]}>Donate</Text></TouchableOpacity>
       </View>
       <View style={[GLOBAL_STYLES.flexRow, {flex:0.5}]}>
-
       </View>
 
     </>
@@ -62,3 +61,4 @@ const DashboardScreen = ({navigation}) => {
 }
 
 export default DashboardScreen
+

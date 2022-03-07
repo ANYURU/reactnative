@@ -9,7 +9,8 @@ const COLORS = {
     PINK:'pink',
     RED:'red',
     GREY:'grey',
-    LIGHTGREY:'light grey'
+    LIGHTGREY:'lightgrey',
+    LIGHTBLACK:'rgba(0,0,0,0.7)'
 }
 
 const FONTS = {
