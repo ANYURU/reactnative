@@ -6,7 +6,7 @@ const DashboardScreen = ({navigation}) => {
   return (
     <>
       {/* <Text>Dashboard</Text> */}
-      <View style={[GLOBAL_STYLES.flexRow,{flex:.3}]}>
+      <View style={[GLOBAL_STYLES.flexRow,{flex:.25}]}>
         <TouchableOpacity 
             style={[
                 GLOBAL_STYLES.dashboardItem, 
@@ -37,23 +37,30 @@ const DashboardScreen = ({navigation}) => {
             navigation.navigate('Testimonies')
         }}><Text style={[GLOBAL_STYLES.dashboardItemText, GLOBAL_STYLES.headings]}>Testimonies</Text></TouchableOpacity>
         </View>
-      <View style={[GLOBAL_STYLES.flexRow, {flex:.3}]}>
+      <View style={[GLOBAL_STYLES.flexRow, {flex:.25}]}>
         <TouchableOpacity style={[GLOBAL_STYLES.dashboardItem]} onPress={()=>{
             navigation.navigate('Service')
         }}><Text style={[GLOBAL_STYLES.dashboardItemText, GLOBAL_STYLES.headings]}>Main Service</Text></TouchableOpacity>
       </View>
-      <View style={[GLOBAL_STYLES.flexRow, {flex:.3}]}>
+      <View style={[GLOBAL_STYLES.flexRow, {flex:.25}]}>
         <TouchableOpacity style={[GLOBAL_STYLES.dashboardItem]} onPress={()=>{
             navigation.navigate('Cell')
         }}><Text style={[GLOBAL_STYLES.dashboardItemText, GLOBAL_STYLES.headings]}>Online Cell</Text></TouchableOpacity>
         <TouchableOpacity style={[GLOBAL_STYLES.dashboardItem]} onPress={()=>{
             navigation.navigate('Tithe')
         }}><Text style={[GLOBAL_STYLES.dashboardItemText, GLOBAL_STYLES.headings]}>Tithe</Text></TouchableOpacity>
-        <TouchableOpacity style={[GLOBAL_STYLES.dashboardItem]} ronPress={()=>{
+        <TouchableOpacity style={[GLOBAL_STYLES.dashboardItem]} onPress={()=>{
             navigation.navigate('Donate')
         }}><Text style={[GLOBAL_STYLES.dashboardItemText, GLOBAL_STYLES.headings]}>Donate</Text></TouchableOpacity>
       </View>
-      <View style={[GLOBAL_STYLES.flexRow, {flex:0.5}]}>
+      <View style={[GLOBAL_STYLES.flexRow, {flex:.25}]}>
+        <TouchableOpacity style={[GLOBAL_STYLES.dashboardItem]} onPress={()=>{
+          navigation.navigate('Money')
+        }}>
+          <Text style={[GLOBAL_STYLES.dashboardItemText, GLOBAL_STYLES.headings]}>money</Text>
+        </TouchableOpacity>
+      </View>
+      <View style={[GLOBAL_STYLES.flexRow, {flex:0.4}]}>
       </View>
 
     </>

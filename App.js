@@ -18,6 +18,7 @@ import ServiceScreen from './Screens/ServiceScreen'
 import CellScreen from './Screens/CellScreen'
 import TitheScreen from './Screens/TitheScreen'
 import DonateScreen from './Screens/DonateScreen'
+import MoneyScreen from './Screens/MoneyScreen'
 
 const App = () => {
   const Stack = createNativeStackNavigator()
@@ -49,6 +50,7 @@ const App = () => {
         <Stack.Screen name="Cell" component={CellScreen} />
         <Stack.Screen name="Tithe" component={TitheScreen} />
         <Stack.Screen name="Donate" component={DonateScreen} />
+        <Stack.Screen name="Money" component={MoneyScreen} />
 
 
       </Stack.Navigator>

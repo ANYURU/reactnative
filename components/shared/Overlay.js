@@ -5,7 +5,6 @@ import Icon from 'react-native-vector-icons/Feather'
 
 const Overlay = ({title, body, titleIconColor, onClose}) => {
 
-
   return (
     <View style={[OVERLAY_STYLES.container]}>
       <View style={[OVERLAY_STYLES.contentWrapper]}>
