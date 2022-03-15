@@ -13,11 +13,12 @@ const COLORS = {
     LIGHTBLACK:'rgba(0,0,0,0.7)'
 }
 
-const FONTS = {
-    BODY:'AdventPro-Medium',
-    HEADINGS:'FredokaOne-Regular',
-    DEFAULTFONT:'AdventPro-Light',
-}
+// const FONTS = {
+//     BODY:'AdventPro-Medium',
+//     HEADINGS:'FredokaOne-Regular',
+//     DEFAULTFONT:'AdventPro-Light',
+// }
 
-export { COLORS, FONTS }
+
+export { COLORS }
 

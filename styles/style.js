@@ -78,11 +78,11 @@ const GLOBAL_STYLES = StyleSheet.create({
         backgroundColor:COLORS.PINK
     },
     dashboardFont:{
-        fontFamily:FONTS.PRIMARY
+        // fontFamily:FONTS.PRIMARY
 
     },
     headings:{
-        fontFamily:FONTS.HEADINGS
+        // fontFamily:FONTS.HEADINGS
     },
     formInputTagError:{
         borderBottomColor:COLORS.RED,
