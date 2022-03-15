@@ -23,7 +23,7 @@ export default function App() {
         name='Dashboard' 
         component={DashboardScreen}
         options={{
-          headerShown:false,
+          headerShown:true,
         }}
         />
         <Stack.Screen 

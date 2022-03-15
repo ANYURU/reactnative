@@ -53,11 +53,11 @@ const GLOBAL_STYLES = StyleSheet.create({
     },
 
     dashboardItem:{
-        flex:1,
-        justifyContent:'center',
-        alignItems:'center',
-        borderWidth:1,
-        borderColor:COLORS.GREY
+        flex:1, 
+        borderWidth:1, 
+        height:'100%', 
+        justifyContent:'center', 
+        alignItems:'center'
     },
     dashboardItemText:{
         fontSize:20,
@@ -120,7 +120,6 @@ const GLOBAL_STYLES = StyleSheet.create({
         borderBottomWidth:1,
         color: COLORS.PURPLE,
     }, 
-
     submitContainer:{
         backgroundColor: COLORS.PURPLE,
         opacity:0.8
