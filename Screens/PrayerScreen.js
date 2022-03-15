@@ -49,9 +49,6 @@ const PrayerScreen = ({navigation}) => {
     </View>
   )
 
-  
-
-  
   return (
     <Formik 
       initialValues={{name:'', address:'', phone:'', request:''}}
