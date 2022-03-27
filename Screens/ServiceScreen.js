@@ -1,4 +1,4 @@
-import { View, Button, Text} from 'react-native'
+import { View, Button, Text, FlatList} from 'react-native'
 import React from 'react'
 import YoutubePlayer from 'react-native-youtube-iframe'
 import mainService from '../helpers/main-service'
@@ -12,7 +12,7 @@ const ServiceScreen = () => {
   }
 
   return (
-    <View>
+    <View style={{flex:1}}>
       <Text>{title}</Text>
       <YoutubePlayer
         height={300}
@@ -21,10 +21,14 @@ const ServiceScreen = () => {
       />
       <Text>{`by ${preacher}`}</Text>
       <Text>{date}</Text>
-      {/* <Button 
-        title={playing ? 'pause' : 'play'}
-        onPress={togglePlaying}
-      /> */}
+      <View style={{flex:0.5}}>
+        <Text>Previous Services</Text>
+        <View style={{flex:1}}>
+          <FlatList>
+
+          </FlatList>
+        </View>
+      </View>
     </View>
   )
 }
